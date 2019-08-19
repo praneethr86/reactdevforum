@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://praneeth15:praneeth15@reactdevforum-wsgya.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "5f0156504384855460c2",
+  "githubSecret": "92bea893e3176f6191221c18c5c024014a2aa534"
 }
