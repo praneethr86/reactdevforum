@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Alert from './components/layout/Alert';
+import Dashboard from './components/dashboard/Dashboard';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import setAuthToken from './utils/setAuthToken';
+import PrivateRoute from './components/routing/PrivateRoute';
 import { loadUser } from './actions/auth'; //to call this we use useEffect Hook
 import './App.css';
 //Redux
@@ -30,6 +32,7 @@ const App = () => {
           <section className='container'>
             <Alert />
             <Switch>
+              <PrivateRoute exact path='/dashboard' component={Dashboard} />
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
             </Switch>
